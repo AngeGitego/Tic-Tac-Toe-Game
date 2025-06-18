@@ -1,0 +1,60 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+MemoryCaptures/
+
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+!/[Aa]ssets/**/*.meta
+
+# Uncomment this line if you wish to ignore the asset store tools plugin
+# [Aa]ssets/AssetStoreTools*
+
+# ========== #
+# OS files   #
+# ========== #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# ========== #
+# Visual Studio / Rider #
+# ========== #
+.vscode/
+.idea/
+*.sln
+*.csproj
+*.pidb
+*.user
+*.unityproj
+*.booproj
+*.suo
+
+# Rider
+*.sln.iml
+
+# Auto-generated JetBrains Rider plugin
+[Aa]ssets/Plugins/Editor/JetBrains*
+
+# ========== #
+# Builds     #
+# ========== #
+*.apk
+*.aab
+*.xcodeproj
+*.xcworkspace
+*.xcuserstate
+
+# Crash logs
+*.stacktrace
+*.log
