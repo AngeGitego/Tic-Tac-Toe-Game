@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -6,10 +5,19 @@ public class UIManager : MonoBehaviour
     public GameObject titlePanel;
     public GameObject settingsPanel;
 
-    
-public void ShowSettings()
+    void Start()
     {
-       
+        GameManager.Instance.OnGameOver += HandleGameOver;
+    }
+
+    void HandleGameOver(string winner)
+    {
+        Debug.Log("Game Over! Winner: " + winner);
+        // Add Game Over panel or sound here if needed
+    }
+
+    public void ShowSettings()
+    {
         titlePanel.SetActive(false);
         settingsPanel.SetActive(true);
     }
