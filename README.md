@@ -1,15 +1,31 @@
-Instructions
-UI/Preliminary scene
-Create a UI transition with at least 2 pages of UI.
+# 🎮 Tic Tac Toe Game – Unity Project
 
-The first page is a title page with a button that transitions to the next page
-The second page is a settings page showing different settings using more UI elements such as sliders, checkboxes, dropdowns, etc.
-These UI elements don't have to be implemented/functional, they can be there for design purposes at this point.
-Other pages you might want to include
-Use Unity's Conditional Compilation to show platform-based UI elements or designs.
-Game Scene
-Use this asset hereLinks to an external site. as your game starter asset.
-Display the next player when a grid is selected and switch turns between the X and O players as referenced hereLinks to an external site..
-Any grid that has already been placed cannot be replaced.
-Strike out the winner either vertically, horizontally, or diagonally and display who won.
-Optional(extra point) - Add AI selection to the game as in this videoLinks to an external site..
+This is a simple 2D Tic Tac Toe game built using Unity. The project demonstrates key **Object-Oriented Programming (OOP)** principles and implements **three major software design patterns**: Singleton, Observer, and Strategy .
+
+---
+
+##  Object-Oriented Programming Principles
+
+###  Encapsulation
+- Core game variables like `currentPlayer` and `gameOver` are private in the `GameManager` class.
+- The public method `OnGridClick()` allows other scripts (like buttons) to interact safely with the game logic.
+
+### Abstraction
+- Methods like `CheckWinCondition()` and `SwitchPlayer()` hide complex logic, making the main code easier to read and manage.
+- The UI doesn't need to know how win-checking works — only that it gets updated.
+
+###  Inheritance *(Optional/Extendable)*
+- The game can be extended using a `Player` base class with `HumanPlayer` and `AIPlayer` subclasses to support different types of gameplay.
+  
+###  Polymorphism *(Optional/Extendable)*
+- If player types are added, they can all use the same `MakeMove()` method in different ways, thanks to polymorphism.
+
+---
+
+## 🔁 Design Patterns Used
+
+### 1. Singleton – `GameManager.cs`
+Ensures there is only one active `GameManager` instance at any time. Provides a global access point for game state.
+
+
+public static GameManager Instance { get; private set; }
